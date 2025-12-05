@@ -9,26 +9,22 @@
     />
     <title>Como Redes Neurais Veem Imagens | Projeto de Extensão</title>
 
-    <!-- Importando Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fo nts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Importando Icons (Phosphor Icons - via script leve) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <style>
-      /* * VARIÁVEIS E CONFIGURAÇÕES GERAIS 
-         */
       :root {
         --bg-dark: #0f172a;
         --bg-card: #1e293b;
-        --primary: #8b5cf6; /* Roxo */
-        --secondary: #06b6d4; /* Ciano */
-        --accent: #ec4899; /* Rosa */
+        --primary: #8b5cf6;
+        --secondary: #06b6d4;
+        --accent: #ec4899;
         --text-main: #f8fafc;
         --text-muted: #94a3b8;
         --gradient-main: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -52,8 +48,6 @@
         overflow-x: hidden;
       }
 
-      /* * UTILITÁRIOS 
-         */
       .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -77,7 +71,6 @@
         position: relative;
       }
 
-      /* Animações de Scroll */
       .hidden-el {
         opacity: 0;
         transform: translateY(30px);
@@ -89,8 +82,6 @@
         transform: translateY(0);
       }
 
-      /* * NAVEGAÇÃO 
-         */
       nav {
         position: fixed;
         top: 0;
@@ -131,15 +122,12 @@
         color: var(--secondary);
       }
 
-      /* Mobile Menu */
       @media (max-width: 768px) {
         .nav-links {
           display: none;
         }
       }
 
-      /* * HERO SECTION 
-         */
       .hero {
         min-height: 100vh;
         display: flex;
@@ -179,7 +167,6 @@
         pointer-events: none;
       }
 
-      /* Efeito de Rede Neural simples com CSS */
       .node {
         position: absolute;
         background: var(--primary);
@@ -197,8 +184,6 @@
         }
       }
 
-      /* * O QUE VOCÊ VAI APRENDER 
-         */
       .topics-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -226,8 +211,6 @@
         margin-bottom: 10px;
       }
 
-      /* * PIXELS SECTION 
-         */
       .pixel-demo-container {
         background: var(--bg-card);
         padding: 30px;
@@ -241,7 +224,7 @@
 
       canvas {
         background: #000;
-        image-rendering: pixelated; /* Crucial para o efeito retrô/pixel */
+        image-rendering: pixelated;
         border-radius: 8px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         max-width: 100%;
@@ -257,8 +240,6 @@
         accent-color: var(--secondary);
       }
 
-      /* * LAYERS VISUALIZATION 
-         */
       .layer-visual {
         display: flex;
         justify-content: center;
@@ -279,7 +260,6 @@
         position: relative;
       }
 
-      /* Representação visual de filtros */
       .filter-vertical {
         background: linear-gradient(90deg, black 45%, white 45%, white 55%, black 55%);
       }
@@ -308,8 +288,6 @@
         border-radius: 50%;
       }
 
-      /* * APPLICATIONS 
-         */
       .apps-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -350,8 +328,6 @@
         color: var(--text-muted);
       }
 
-      /* * SUMMARY 
-         */
       .summary-diagram {
         display: flex;
         justify-content: space-between;
@@ -383,8 +359,6 @@
         color: var(--primary);
       }
 
-      /* * FOOTER 
-         */
       footer {
         background: #0b1120;
         padding: 60px 0 30px;
@@ -416,7 +390,6 @@
     </style>
   </head>
   <body>
-    <!-- NAVEGAÇÃO -->
     <nav>
       <div class="container nav-content">
         <div class="logo">Trabalho de <span style="color: var(--secondary)">Extensão</span></div>
@@ -429,10 +402,8 @@
       </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="inicio" class="hero">
       <div class="hero-visual" id="bg-animation">
-        <!-- Gerado via JS -->
       </div>
       <div class="container hero-content hidden-el">
         <h1>Como Redes Neurais <br /><span class="gradient-text">Veem Imagens</span></h1>
@@ -446,7 +417,6 @@
       </div>
     </section>
 
-    <!-- O QUE VOCÊ VAI APRENDER -->
     <section style="background: var(--bg-card)">
       <div class="container">
         <h2 class="hidden-el" style="text-align: center; margin-bottom: 40px">
@@ -477,7 +447,6 @@
       </div>
     </section>
 
-    <!-- PIXELS SECTION -->
     <section id="pixels">
       <div class="container">
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px">
@@ -530,7 +499,6 @@
       </div>
     </section>
 
-    <!-- FIRST LAYER: EDGES -->
     <section id="camadas" style="background: rgba(255, 255, 255, 0.02)">
       <div class="container">
         <div style="text-align: center; max-width: 800px; margin: 0 auto 50px" class="hidden-el">
@@ -588,11 +556,9 @@
       </div>
     </section>
 
-    <!-- MIDDLE & DEEP LAYERS -->
     <section>
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center">
-          <!-- Middle Layers -->
           <div class="hidden-el">
             <h3 class="highlight">Camadas Intermediárias</h3>
             <h2 style="font-size: 2rem; margin-bottom: 20px">Montando o Puzzle</h2>
@@ -613,7 +579,6 @@
             </div>
           </div>
 
-          <!-- Deep Layers -->
           <div class="hidden-el">
             <h3 class="highlight" style="color: var(--accent)">Camadas Profundas</h3>
             <h2 style="font-size: 2rem; margin-bottom: 20px">O Objeto Completo</h2>
@@ -636,7 +601,6 @@
       </div>
     </section>
 
-    <!-- APPLICATIONS -->
     <section id="aplicacoes" style="background: rgba(255, 255, 255, 0.02)">
       <div class="container">
         <h2 class="hidden-el" style="text-align: center; margin-bottom: 50px">
@@ -681,7 +645,6 @@
       </div>
     </section>
 
-    <!-- VISUAL SUMMARY -->
     <section>
       <div class="container hidden-el">
         <h2 style="text-align: center; margin-bottom: 40px">Resumo do Processo</h2>
@@ -715,7 +678,9 @@
 
     <footer>
       <div class="container">
-        <span class="footer-logo">Universidade Regional Integrada do Alto Uruguai e das Missões (URI)</span>
+        <span class="footer-logo"
+          >Universidade Regional Integrada do Alto Uruguai e das Missões (URI)</span
+        >
         <p>Disciplina: Inteligência Artificial</p>
         <p>Prof. Dr. Denilson Rodrigues da Silva</p>
         <p>Alunos: Gabriel Hampel e Vittor de Aguiar</p>
@@ -742,21 +707,16 @@
         observer.observe(el);
       });
 
-      /**
-       * LÓGICA DO SIMULADOR DE PIXELS
-       * Desenha um coração no canvas e permite "pixelar" ele
-       */
       const canvas = document.getElementById("pixelCanvas");
       const ctx = canvas.getContext("2d");
       const slider = document.getElementById("resolution");
       const pixelText = document.getElementById("pixel-text");
 
-      // Função para desenhar a forma base (um coração vermelho)
       function drawShape(context, size) {
-        context.fillStyle = "#1e293b"; // Limpa fundo
+        context.fillStyle = "#1e293b";
         context.fillRect(0, 0, size, size);
 
-        context.fillStyle = "#ec4899"; // Cor Rosa/Vermelho
+        context.fillStyle = "#ec4899";
         context.beginPath();
         const topCurveHeight = size * 0.3;
         context.moveTo(size * 0.5, size * 0.2);
@@ -807,28 +767,19 @@
         const h = canvas.height;
         const resolution = parseInt(slider.value);
 
-        // 1. Criar um canvas temporário pequeno (offscreen)
-        // O tamanho depende da resolução escolhida pelo usuário.
-        // Se resolução = 10, o canvas temp terá 10x10px.
         const tempCanvas = document.createElement("canvas");
         const tempSize = Math.max(4, Math.floor(w * (resolution / 100)));
         tempCanvas.width = tempSize;
         tempCanvas.height = tempSize;
         const tempCtx = tempCanvas.getContext("2d");
 
-        // 2. Desenhar a forma no canvas pequeno
         drawShape(tempCtx, tempSize);
 
-        // 3. Limpar o canvas principal
         ctx.clearRect(0, 0, w, h);
 
-        // 4. Desenhar o canvas pequeno esticado no canvas principal
-        // A propriedade imageSmoothingEnabled = false no CSS garante o visual "pixelado"
-        // mas garantimos via JS também para navegadores antigos
         ctx.imageSmoothingEnabled = false;
         ctx.drawImage(tempCanvas, 0, 0, tempSize, tempSize, 0, 0, w, h);
 
-        // 5. Atualizar Texto
         if (resolution < 10) {
           pixelText.textContent =
             "Baixa Resolução: O computador vê apenas uma grade de cores médias.";
@@ -839,20 +790,14 @@
         }
       }
 
-      // Renderiza inicial e adiciona listener
       slider.addEventListener("input", renderPixelated);
       renderPixelated();
 
-      /**
-       * ANIMAÇÃO DE FUNDO (PARTÍCULAS SIMPLES)
-       * Cria nós flutuantes no fundo da Hero Section
-       */
       const bgContainer = document.getElementById("bg-animation");
       for (let i = 0; i < 15; i++) {
         const node = document.createElement("div");
         node.classList.add("node");
 
-        // Posição aleatória
         const size = Math.random() * 10 + 5;
         node.style.width = `${size}px`;
         node.style.height = `${size}px`;
@@ -860,7 +805,6 @@
         node.style.top = `${Math.random() * 100}%`;
         node.style.opacity = Math.random() * 0.5;
 
-        // Duração aleatória da animação
         node.style.animationDuration = `${Math.random() * 5 + 3}s`;
 
         bgContainer.appendChild(node);
